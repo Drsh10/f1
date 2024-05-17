@@ -1,3 +1,13 @@
+/*
+*  FILE: f1.cpp
+*  PROJECT       : SENG1050 - Focused #1
+*  PROGRAMMER    : Darsh Patel
+*  FIRST VERSION : 17-05-2024
+*  DESCRIPTION   :
+*    This program uses  Dynamic memory allocation to store and
+     show the Data of 10 Flights entered by the user.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
