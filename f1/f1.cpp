@@ -98,12 +98,16 @@ void fillFlightInfo(FlightInfo* flight, char* destinationStr, char* dateStr)
     // Copying the date string
     strcpy(flight->date, dateStr);
 }
-
+/*
+*This function prints the destination and date information for each flight
+ in the provided array of FlightInfo structs in a formatted manner.
+*/ 
 void printFlightInfo(FlightInfo* flights, int numFlights) 
 {
+    // Iterating through each flight in the array
     for (int i = 0; i < numFlights; i++) 
     {
-       
+        // Printing destination and date for the current flight
         printf("%s \t\t%s\n", flights[i].destination, flights[i].date);
     }
 }
