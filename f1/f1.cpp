@@ -71,20 +71,31 @@ int main()
     return 0;
 }
 
+/*
+* 
+* This function allocates memory for the destination and date strings, 
+ copies the provided destination and date strings into the allocated memory, 
+ and assigns them to the corresponding fields of the FlightInfo struct.
+*/
+
 void fillFlightInfo(FlightInfo* flight, char* destinationStr, char* dateStr) 
 {
+    // Allocating the memory for destination string
     flight->destination = (char*)malloc(strlen(destinationStr) + 1);
     if (flight->destination == NULL) 
     {
         exit(1);
     }
+    // Copying the destination string
     strcpy(flight->destination, destinationStr);
 
+    // Allocating the memory for date string
     flight->date = (char*)malloc(strlen(dateStr) + 1);
     if (flight->date == NULL) 
     {
         exit(1);
     }
+    // Copying the date string
     strcpy(flight->date, dateStr);
 }
 
