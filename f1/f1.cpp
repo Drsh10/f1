@@ -23,7 +23,7 @@ typedef struct
     char* date;
 } FlightInfo;
 
-
+// Function Prototype
 void fillFlightInfo(FlightInfo* flight, char* destinationStr, char* dateStr);
 
 void printFlightInfo(FlightInfo* flights, int numFlights);
