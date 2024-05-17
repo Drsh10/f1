@@ -31,11 +31,12 @@ void printFlightInfo(FlightInfo* flights, int numFlights);
 
 int main() 
 {
-    FlightInfo flights[10];
-    int numFlights = 0;
+    FlightInfo flights[10];   // Declare an array of FlightInfo structs
+    int numFlights = 0;      // Initialize the number of flights entered to 0
 
     printf("Please enter ten pairs of flight information :\n");
 
+    // Loop to get input for each flight
     for (int i = 0; i < 10; i++) 
     {
         char destinationStr[MAX_STR_LEN];
@@ -56,12 +57,13 @@ int main()
             break;
         }
     }
+    // Print flight information
     printf("Destination \tDate\n");
     printf("--------------------------\n");
     printFlightInfo(flights, numFlights);
     printf("--------------------------\n");
 
-    // Free the memory allocated for the destination and date fields of each FlightInfo struct
+    // Setting the memory allocated for the destination and date fields of each FlightInfo struct to Free.
     for (int i = 0; i < numFlights; i++) 
     {
         free(flights[i].destination);
