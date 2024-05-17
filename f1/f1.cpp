@@ -29,8 +29,6 @@ void fillFlightInfo(FlightInfo* flight, char* destinationStr, char* dateStr);
 void printFlightInfo(FlightInfo* flights, int numFlights);
 
 
-
-
 int main() 
 {
     FlightInfo flights[10];
@@ -59,7 +57,9 @@ int main()
         }
     }
     printf("Destination \tDate\n");
+    printf("--------------------------\n");
     printFlightInfo(flights, numFlights);
+    printf("--------------------------\n");
 
     // Free the memory allocated for the destination and date fields of each FlightInfo struct
     for (int i = 0; i < numFlights; i++) 
@@ -77,7 +77,6 @@ int main()
  copies the provided destination and date strings into the allocated memory, 
  and assigns them to the corresponding fields of the FlightInfo struct.
 */
-
 void fillFlightInfo(FlightInfo* flight, char* destinationStr, char* dateStr) 
 {
     // Allocating the memory for destination string
@@ -98,6 +97,7 @@ void fillFlightInfo(FlightInfo* flight, char* destinationStr, char* dateStr)
     // Copying the date string
     strcpy(flight->date, dateStr);
 }
+
 /*
 *This function prints the destination and date information for each flight
  in the provided array of FlightInfo structs in a formatted manner.
